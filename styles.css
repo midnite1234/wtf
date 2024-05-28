@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #46103a 0%, #46102a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+}
+
+#game-container, #shop-container {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #b6b6b6;
+}
+
+#watermelon {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 5px solid #180613;
+    border-radius: 15px;
+}
+
+#watermelon:hover {
+    transform: scale(1.1);
+}
+
+#stats {
+    margin-top: 20px;
+}
+
+#stats div {
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#energy-bar-container {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#energy-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #642c4b, #965985);
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+button {
+    padding: 12px 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #361c2f, #41132f);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #9c949b;
+    transform: scale(1.05);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.menu div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    width: 70px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.menu div:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.floating-number {
+    position: absolute;
+    animation: floatUp 1s ease-out forwards;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.case {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.case:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.case img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.case p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #969382;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+#case-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #817e6a;
+}

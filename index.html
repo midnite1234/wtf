@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Boost</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Click to Boost</h1>
+        <img id="watermelon" src="IMG_2288.webp" alt="Boost">
+        <div id="stats">
+            <div>Арбузы: <span id="watermelons">0</span></div>
+            <div>Энергия: <span id="energy">100</span></div>
+            <div>Boost коины: <span id="boost-coins">0</span></div>
+            <div id="energy-bar-container">
+                <div id="energy-bar"></div>
+            </div>
+        </div>
+        <button onclick="resetGame()">Сбросить игру</button>
+        <div class="menu">
+            <div onclick="openShop()">Лавка</div>
+            <div>Друзья</div>
+            <div>Рейтинг</div>
+            <div>Задания</div>
+        </div>
+    </div>
+
+    <div id="shop-container" style="display:none;">
+        <h1>Лавка</h1>
+        <div class="case" onclick="openCase()">
+            <img src="case.png" alt="Case">
+            <p>Открыть кейс (50 boost коинов)</p>
+        </div>
+        <div id="prizes" style="display:none;">
+            <div>Discord Nitro</div>
+            <div>2 буста</div>
+            <div>9 бустов</div>
+            <div>4 буста</div>
+            <div>10000 boost коинов</div>
+        </div>
+        <div id="case-result"></div>
+        <button onclick="closeShop()">Назад</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
