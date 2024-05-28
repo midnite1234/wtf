@@ -11,14 +11,12 @@
         <h1>Click to Boost</h1>
         <img id="watermelon" src="IMG_2288.webp" alt="Boost">
         <div id="stats">
-            <div>Арбузы: <span id="watermelons">0</span></div>
-            <div>Энергия: <span id="energy">100</span></div>
+            <div>Энергия ⚡️: <span id="energy">100</span></div>
             <div>Boost коины: <span id="boost-coins">0</span></div>
             <div id="energy-bar-container">
                 <div id="energy-bar"></div>
             </div>
         </div>
-        <button onclick="resetGame()">Сбросить игру</button>
         <div class="menu">
             <div onclick="openShop()">Лавка</div>
             <div>Друзья</div>
@@ -29,9 +27,20 @@
 
     <div id="shop-container" style="display:none;">
         <h1>Лавка</h1>
-        <div class="case" onclick="openCase()">
-            <img src="case.png" alt="Case">
-            <p>Открыть кейс (50 boost коинов)</p>
+        <div class="menu">
+            <div onclick="openUpgrades()">Улучшения</div>
+        </div>
+        <div id="upgrades" style="display:none;">
+            <h2>Улучшения</h2>
+            <div class="upgrade" onclick="buyUpgrade(1)">
+                <p>Увеличить клики на 1 (Цена: 100 boost коинов)</p>
+            </div>
+            <div class="upgrade" onclick="buyUpgrade(2)">
+                <p>Увеличить клики на 5 (Цена: 500 boost коинов)</p>
+            </div>
+            <div class="upgrade" onclick="buyUpgrade(3)">
+                <p>Увеличить клики на 10 (Цена: 1000 boost коинов)</p>
+            </div>
         </div>
         <div id="prizes" style="display:none;">
             <div>Discord Nitro</div>
