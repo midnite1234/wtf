@@ -114,22 +114,39 @@ button:hover {
 }
 
 .case {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+    perspective: 1000px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#case {
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transition: transform 2s ease-in-out;
+}
+
+.case:hover #case {
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.case img {
+    width: 100%;
+    height: 100%;
 }
 
 .case:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-.case img {
-    width: 50px;
-    margin-bottom: 10px;
+.case:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .case p {
@@ -155,4 +172,8 @@ button:hover {
     font-size: 1.2em;
     font-weight: 600;
     color: #817e6a;
+}
+
+.unselectable {
+    user-select: none;
 }
